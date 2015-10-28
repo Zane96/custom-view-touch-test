@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.think.testview.customview.MyImageButton;
 import com.example.think.testview.customview.MyMulTouchRect;
 
 import java.io.IOException;
@@ -17,7 +18,7 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mulTouch, smallPoint;
+    Button mulTouch, smallPoint, imagebutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, MySmallPointViewActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        imagebutton = (Button) findViewById(R.id.imagebutton);
+        imagebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MyImageButtonActivity.class);
                 startActivity(intent);
             }
         });

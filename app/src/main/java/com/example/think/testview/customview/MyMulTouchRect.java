@@ -17,9 +17,6 @@ import android.widget.ImageView;
  */
 public class MyMulTouchRect extends ImageView{
 
-
-    private Paint mPaint;
-
     private Matrix mMatrix;
 
     //缩放的手势侦听器,像一个工厂一样帮我们计算东西
@@ -30,8 +27,6 @@ public class MyMulTouchRect extends ImageView{
     //旋转的中心点
     private int mPivotX, mPivotY;
 
-
-
     public MyMulTouchRect(Context context, AttributeSet attri) {
         super(context, attri);
 
@@ -40,11 +35,15 @@ public class MyMulTouchRect extends ImageView{
         mMatrix = new Matrix();
     }
 
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
+
     }
+
+
 
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {

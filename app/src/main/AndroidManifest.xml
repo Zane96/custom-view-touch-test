@@ -23,6 +23,7 @@
         <activity android:name=".MySmallPointViewActivity">
 
         </activity>
+        <activity android:name=".MyImageButtonActivity"/>
     </application>
 
 </manifest>

@@ -10,10 +10,17 @@
     android:id="@+id/smallpoint"/>
 
     <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="多点触碰"
+    android:id="@+id/multouch"
+    android:layout_below="@id/smallpoint"/>
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="多点触碰"
-        android:id="@+id/multouch"
-        android:layout_below="@id/smallpoint"/>
+        android:text="自定义imagebutton"
+        android:id="@+id/imagebutton"
+        android:layout_below="@id/multouch"/>
 
 </RelativeLayout>
