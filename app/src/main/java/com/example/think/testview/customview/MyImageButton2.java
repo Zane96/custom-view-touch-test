@@ -30,10 +30,10 @@ public class MyImageButton2 extends FrameLayout{
 
         mImageView = (ImageView) findViewById(R.id.imageview_button);
         mButton = (Button) findViewById(R.id.button_imagebutton);
-        TypedArray a = getContext().obtainStyledAttributes(R.styleable.MyImageButton);
+        TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.MyImageButton);
 
         try{
-            resId = a.getResourceId(R.styleable.MyImageButton_src, 0);
+            resId = a.getResourceId(R.styleable.MyImageButton_Imagesrc, 0);
         }finally {
             a.recycle();
         }

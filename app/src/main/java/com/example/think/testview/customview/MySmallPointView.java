@@ -29,6 +29,7 @@ public class MySmallPointView extends View{
     }
 
 
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -44,6 +45,8 @@ public class MySmallPointView extends View{
         canvas.drawCircle(x, y, r, mPaint);
 
     }
+
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
