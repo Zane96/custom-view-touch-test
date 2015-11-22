@@ -29,10 +29,15 @@
         android:id="@+id/movetouch"
         android:layout_below="@id/imagebutton"/>
     <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="事件的反窃取"
+    android:id="@+id/interceptouch"
+    android:layout_below="@id/movetouch"/>
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="事件的反窃取"
-        android:id="@+id/interceptouch"
-        android:layout_below="@id/movetouch"/>
-
+        android:text="触摸代理"
+        android:id="@+id/touchdelegate"
+        android:layout_below="@id/interceptouch"/>
 </RelativeLayout>

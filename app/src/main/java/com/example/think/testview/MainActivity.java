@@ -9,7 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch;
+    Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch, touchDelegate;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TouchInterceptActivity.class));
+            }
+        });
+
+        touchDelegate = (Button) findViewById(R.id.touchdelegate);
+        touchDelegate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TouchDelegateActivity.class));
             }
         });
 
