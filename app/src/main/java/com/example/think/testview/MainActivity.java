@@ -1,6 +1,7 @@
 package com.example.think.testview;
 
 import android.content.Intent;
+import android.sax.StartElementListener;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -9,7 +10,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch, touchDelegate;
+    Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch, touchDelegate,
+    touchListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TouchDelegateActivity.class));
+            }
+        });
+
+        touchListener = (Button) findViewById(R.id.touchlistener);
+        touchListener.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TouchListenActivity.class));
             }
         });
 

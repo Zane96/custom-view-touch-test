@@ -40,4 +40,10 @@
         android:text="触摸代理"
         android:id="@+id/touchdelegate"
         android:layout_below="@id/interceptouch"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试onTouch()优先级"
+        android:id="@+id/touchlistener"
+        android:layout_below="@id/touchdelegate"/>
 </RelativeLayout>
