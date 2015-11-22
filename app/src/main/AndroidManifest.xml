@@ -24,6 +24,8 @@
 
         </activity>
         <activity android:name=".MyImageButtonActivity"/>
+        <activity android:name=".MyMoveTouchActivity"/>
+        <activity android:name=".TouchInterceptActivity"/>
     </application>
 
 </manifest>

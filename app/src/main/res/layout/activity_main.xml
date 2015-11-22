@@ -22,5 +22,17 @@
         android:text="自定义imagebutton"
         android:id="@+id/imagebutton"
         android:layout_below="@id/multouch"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="slop常量对move事件的影响"
+        android:id="@+id/movetouch"
+        android:layout_below="@id/imagebutton"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="事件的反窃取"
+        android:id="@+id/interceptouch"
+        android:layout_below="@id/movetouch"/>
 
 </RelativeLayout>
