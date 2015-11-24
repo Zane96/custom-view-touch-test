@@ -46,4 +46,10 @@
         android:text="测试onTouch()优先级"
         android:id="@+id/touchlistener"
         android:layout_below="@id/touchdelegate"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BoxGridLayout"
+        android:id="@+id/boxgridactivity"
+        android:layout_below="@id/touchlistener"/>
 </RelativeLayout>

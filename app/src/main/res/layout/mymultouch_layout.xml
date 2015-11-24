@@ -5,7 +5,7 @@
 
 
 
-    <com.example.think.testview.customview.MyMulTouchRect
+    <com.example.think.testview.customview.MyMulTouchImage
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/ic_launcher"

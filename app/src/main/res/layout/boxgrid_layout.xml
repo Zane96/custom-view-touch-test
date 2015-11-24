@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <com.example.think.testview.customview.BoxGridLayout
+        xmlns:app = "http://schemas.android.com/apk/res/com.example.think.testview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:splitWidth="2dp"
+        app:columnsNum="2">
+
+        <include layout="@layout/box_small_layout" />
+
+        <include layout="@layout/box_small_layout" />
+
+        <include layout="@layout/box_small_layout" />
+
+        <include layout="@layout/box_small_layout" />
+
+    </com.example.think.testview.customview.BoxGridLayout>
+
+</FrameLayout>

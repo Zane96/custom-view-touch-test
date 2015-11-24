@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch, touchDelegate,
-    touchListener;
+    touchListener, boxgrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, TouchListenActivity.class));
+            }
+        });
+
+        boxgrid = (Button) findViewById(R.id.boxgridactivity);
+        boxgrid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BoxGridActivity.class));
             }
         });
 

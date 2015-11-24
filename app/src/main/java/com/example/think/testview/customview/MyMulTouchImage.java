@@ -15,11 +15,11 @@ import android.widget.ImageView;
 /**
  * Created by think on 2015/9/19.
  */
-public class MyMulTouchRect extends ImageView{
+public class MyMulTouchImage extends ImageView{
 
     private Matrix mMatrix;
 
-    //缩放的手势侦听器,像一个工厂一样帮我们计算东西
+    //缩放的手势侦听器,像一个工厂一样帮我们计算东西(数学引擎)
     private ScaleGestureDetector mScaleGestureDector;
 
     //旋转的角度
@@ -27,10 +27,11 @@ public class MyMulTouchRect extends ImageView{
     //旋转的中心点
     private int mPivotX, mPivotY;
 
-    public MyMulTouchRect(Context context, AttributeSet attri) {
+    public MyMulTouchImage(Context context, AttributeSet attri) {
         super(context, attri);
 
         mScaleGestureDector = new ScaleGestureDetector(context, mScaleListener);
+        //设置图片的缩放类型为矩阵类型
         setScaleType(ScaleType.MATRIX);
         mMatrix = new Matrix();
     }
@@ -39,21 +40,8 @@ public class MyMulTouchRect extends ImageView{
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-
-
     }
 
-
-
-    @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-    }
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
@@ -74,7 +62,7 @@ public class MyMulTouchRect extends ImageView{
         }
     }
 
-    //这里负责把收缩手势给矩阵，然后onsizechangde再来改变view的大小
+    //这里负责把监听到的收缩手势最后得到的数据给矩阵，然后通过缩放数据改变矩阵
     private ScaleGestureDetector.SimpleOnScaleGestureListener mScaleListener
             = new ScaleGestureDetector.SimpleOnScaleGestureListener() {
         @Override
@@ -97,7 +85,7 @@ public class MyMulTouchRect extends ImageView{
         //转化成角度
         int degrees = (int)(radians * 180 / Math.PI);
 
-        //必须使用geiActionMask()，因为这里是多个手指触碰时间，而这个方法的手指触碰索引信息不是存储
+        //必须使用geiActionMask()，因为这里是多个手指触碰事件，而这个方法的手指触碰索引信息不是存储
         //在Movention里面，而是getActionIndex()来获得，而getAction()是吧索引信息存在Movention
         //里面，所以如果只传一个movention进来就不行了
         switch (event.getActionMasked()) {
@@ -108,10 +96,7 @@ public class MyMulTouchRect extends ImageView{
                 mLastAngle = degrees;
                 break;
             case MotionEvent.ACTION_MOVE:
-                // ATAN returns a converted value between -90deg and +90deg
-                // which creates a point when two fingers are vertical where the
-                // angle flips sign.  We handle this case by rotating a small amount
-                // (5 degrees) in the direction we were traveling
+
                 if ((degrees - mLastAngle) > 45) {
                     //Going CCW across the boundary
                     mMatrix.postRotate(-5, mPivotX, mPivotY);
@@ -135,7 +120,7 @@ public class MyMulTouchRect extends ImageView{
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
-        //一只手指的touch事件我们不感兴趣，但是仍要然会true，这样才能接受后面的剁手指触碰时间
+        //一只手指的touch事件我们不感兴趣，但是仍要然会true，这样才能接受后面的多手指触碰时间
         if(event.getAction() == MotionEvent.ACTION_DOWN){
 
             return true;
@@ -143,6 +128,8 @@ public class MyMulTouchRect extends ImageView{
 
         switch (event.getPointerCount()){
             case 3:
+                //把event交给手势处理器的onTouchEvent（）方法，判断是否有合适的回调函数来处理
+                //用户的手势
                 return mScaleGestureDector.onTouchEvent(event);
 
             case 2:

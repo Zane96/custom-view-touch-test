@@ -3,4 +3,10 @@
     <declare-styleable name="MyImageButton">
         <attr name="Imagesrc" format="reference"/>
     </declare-styleable>
+    
+    <declare-styleable name="BoxGridLayout">
+        <attr name="splitWidth" format="dimension"/>
+        <attr name="splitColor" format="color"/>
+        <attr name="columnsNum" format="integer"/>
+    </declare-styleable>
 </resources>
