@@ -3,6 +3,15 @@
     <declare-styleable name="MyImageButton">
         <attr name="Imagesrc" format="reference"/>
     </declare-styleable>
+
+    <declare-styleable name="DoubleImageView">
+        <attr name="android:drawableLeft" />
+        <attr name="android:drawableRight" />
+        <attr name="android:text" format="string"/>
+        <attr name="android:textSize" format="dimension"/>
+        <attr name="android:textColor" format="color"/>
+        <attr name="android:spacing" format="dimension"/>
+    </declare-styleable>
     
     <declare-styleable name="BoxGridLayout">
         <attr name="splitWidth" format="dimension"/>
