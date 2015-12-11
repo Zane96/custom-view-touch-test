@@ -5,12 +5,12 @@
     </declare-styleable>
 
     <declare-styleable name="DoubleImageView">
-        <attr name="android:drawableLeft" />
-        <attr name="android:drawableRight" />
-        <attr name="android:text" format="string"/>
-        <attr name="android:textSize" format="dimension"/>
-        <attr name="android:textColor" format="color"/>
-        <attr name="android:spacing" format="dimension"/>
+        <attr name="drawableLeft" format="reference"/>
+        <attr name="drawableRight" format="reference"/>
+        <attr name="text2" format="string"/>
+        <attr name="textSize2" format="dimension"/>
+        <attr name="textColor2" format="color"/>
+        <attr name="spacing2" format="dimension"/>
     </declare-styleable>
     
     <declare-styleable name="BoxGridLayout">

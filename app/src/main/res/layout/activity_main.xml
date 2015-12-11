@@ -52,4 +52,10 @@
         android:text="BoxGridLayout"
         android:id="@+id/boxgridactivity"
         android:layout_below="@id/touchlistener"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="重叠图片"
+        android:id="@+id/doubleimageview"
+        android:layout_below="@id/boxgridactivity"/>
 </RelativeLayout>
