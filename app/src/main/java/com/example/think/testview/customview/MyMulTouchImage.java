@@ -1,5 +1,6 @@
 package com.example.think.testview.customview;
 
+import android.app.IntentService;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
@@ -121,23 +122,20 @@ public class MyMulTouchImage extends ImageView{
     public boolean onTouchEvent(MotionEvent event) {
 
         //一只手指的touch事件我们不感兴趣，但是仍要然会true，这样才能接受后面的多手指触碰时间
-        if(event.getAction() == MotionEvent.ACTION_DOWN){
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
 
             return true;
         }
 
-        switch (event.getPointerCount()){
+        switch (event.getPointerCount()) {
             case 3:
                 //把event交给手势处理器的onTouchEvent（）方法，判断是否有合适的回调函数来处理
-                //用户的手势
+                //用户的手势/
                 return mScaleGestureDector.onTouchEvent(event);
-
             case 2:
                 return doRotationEvent(event);
-
             default:
                 return super.onTouchEvent(event);
-
         }
     }
 }

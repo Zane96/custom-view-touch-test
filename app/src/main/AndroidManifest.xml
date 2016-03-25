@@ -31,6 +31,7 @@
         <activity android:name=".TouchListenActivity"/>
         <activity android:name=".BoxGridActivity"/>
         <activity android:name=".DoubleImageviewActivity"/>
+        <activity android:name=".ButtonTestActivity"/>
     </application>
 
 </manifest>

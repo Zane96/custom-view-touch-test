@@ -58,4 +58,11 @@
         android:text="重叠图片"
         android:id="@+id/doubleimageview"
         android:layout_below="@id/boxgridactivity"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_test"
+        android:text="测试button"
+        android:layout_below="@id/doubleimageview"/>
 </RelativeLayout>

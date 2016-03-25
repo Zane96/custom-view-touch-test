@@ -1,10 +1,12 @@
 package com.example.think.testview;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.Toast;
@@ -32,7 +34,7 @@ public class TouchInterceptActivity extends AppCompatActivity{
         mButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                switch (event.getAction()){
+                switch (event.getAction()) {
                     case MotionEvent.ACTION_MOVE:
                         mScrollview.requestDisallowInterceptTouchEvent(true);
                 }
