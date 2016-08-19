@@ -74,7 +74,7 @@ public class FigureImageView extends ImageView {
         }
         array.recycle();
         mPaint.setAntiAlias(true);
-        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
+        mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setStrokeWidth(0);
     }
@@ -90,7 +90,7 @@ public class FigureImageView extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         int saveCount = canvas.saveLayerAlpha(0.0F, 0.0F, canvas.getWidth(), canvas.getHeight(),
-                255, Canvas.FULL_COLOR_LAYER_SAVE_FLAG);
+                255, Canvas.HAS_ALPHA_LAYER_SAVE_FLAG);
         super.onDraw(canvas);
         canvas.translate(mViewWidth/2,mViewHeight/2);
         mPath.addRect(-mViewWidth/2,-mViewHeight/2,mViewWidth/2,mViewHeight/2, Path.Direction.CW);
