@@ -18,4 +18,16 @@
         <attr name="splitColor" format="color"/>
         <attr name="columnsNum" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="FigureImageView">
+        <attr name="mode" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="round_rect" value="1"/>
+            <enum name="sector" value="2"/>
+            <enum name="ring" value="3"/>
+        </attr>
+        <attr name="radius" format="dimension"/>
+        <attr name="angle" format="float"/>
+        <attr name="length" format="dimension"/>
+    </declare-styleable>
 </resources>

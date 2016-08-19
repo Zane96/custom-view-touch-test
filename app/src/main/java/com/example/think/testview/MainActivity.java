@@ -11,7 +11,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button mulTouch, smallPoint, imagebutton, movetouch, interceptouch, touchDelegate,
-    touchListener, boxgrid, doubleimageview, buttonTest;
+    touchListener, boxgrid, doubleimageview, buttonTest, touchToMove, figureImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
         buttonTest = (Button) findViewById(R.id.button_test);
         buttonTest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,6 +103,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        touchToMove = (Button) findViewById(R.id.touch_move_test);
+        touchToMove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, TouchToMoveActivity.class));
+            }
+        });
+
+        figureImage = (Button) findViewById(R.id.figureimage);
+        figureImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, FigureImageViewActivity.class));
+            }
+        });
     }
 
 

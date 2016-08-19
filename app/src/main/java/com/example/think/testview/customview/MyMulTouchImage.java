@@ -44,6 +44,7 @@ public class MyMulTouchImage extends ImageView{
     }
 
 
+    //在这里监听大小的改变
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
@@ -123,7 +124,6 @@ public class MyMulTouchImage extends ImageView{
 
         //一只手指的touch事件我们不感兴趣，但是仍要然会true，这样才能接受后面的多手指触碰时间
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
             return true;
         }
 
