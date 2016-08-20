@@ -22,7 +22,7 @@ import android.widget.ImageView;
  * Email: zanebot96@gmail.com
  */
 
-public class testview extends ImageView {
+public class CircleImageView extends ImageView {
 
     private Paint mPaint;
     private Rect rect;
@@ -34,15 +34,15 @@ public class testview extends ImageView {
 
     private Bitmap mBitmap;
 
-    public testview(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CircleImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
-    public testview(Context context, AttributeSet attrs) {
+    public CircleImageView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public testview(Context context) {
+    public CircleImageView(Context context) {
         this(context, null);
     }
 

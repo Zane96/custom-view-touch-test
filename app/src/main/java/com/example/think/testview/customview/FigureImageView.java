@@ -19,11 +19,6 @@ import android.widget.ImageView;
 
 import com.example.think.testview.R;
 
-/**
- * Created by Idtk on 2016/5/29.
- * blog : http://www.idtkm.com/
- */
-
 public class FigureImageView extends ImageView {
 
     protected int mViewWidth,mViewHeight;
